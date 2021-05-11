@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="118.43078mm"
-   height="72.789352mm"
-   viewBox="0 0 118.43078 72.789352"
+   width="116.76557mm"
+   height="91.860069mm"
+   viewBox="0 0 116.76557 91.86007"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -108,6 +108,21 @@
          style="fill:#ff6600;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1143-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1141-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff6600;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -117,8 +132,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="342.54832"
-     inkscape:cy="97.276957"
+     inkscape:cx="137.12282"
+     inkscape:cy="154.20263"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -127,7 +142,7 @@
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:object-nodes="false"
+     inkscape:object-nodes="true"
      inkscape:object-paths="false"
      inkscape:snap-midpoints="false"
      inkscape:snap-nodes="false"
@@ -151,45 +166,30 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-57.085242,-125.498)">
-    <rect
-       y="137.78883"
-       x="71.004051"
-       height="5.1026764"
-       width="6.4255595"
-       id="rect859"
-       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <rect
+     transform="translate(-57.085242,-125.47526)">
+    <path
        style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect841"
-       width="2.6457977"
-       height="5.1026764"
-       x="131.66913"
-       y="137.78883" />
+       d="m 71.004051,137.78883 h 91.281069 v 5.10268 H 71.004051 Z"
+       id="rect859"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
     <rect
        y="137.78883"
-       x="154.34766"
-       height="5.1026764"
-       width="2.6457977"
-       id="rect857"
-       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <rect
-       y="137.78883"
-       x="77.429611"
-       height="5.1026764"
-       width="54.239582"
+       x="77.413132"
+       height="5.1026802"
+       width="59.547714"
        id="rect837"
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect839"
        width="20.032732"
        height="5.1026764"
-       x="134.31491"
+       x="139.60658"
        y="137.78883" />
     <path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 70.47487,137.25967 h 87.04781 v 6.16101 H 70.47487 Z"
+       d="m 70.47487,137.25967 h 92.33948 v 6.16101 H 70.47487 Z"
        id="rect861"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -218,23 +218,23 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.09716344px;line-height:1;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19357271"
-       x="135.23898"
+       x="140.53065"
        y="141.28317"
        id="text1934"><tspan
          sodipodi:role="line"
          id="tspan1932"
-         x="135.23898"
+         x="140.53065"
          y="141.28317"
          style="stroke-width:0.19357271">byte offsets</tspan></text>
     <text
        id="text1938"
-       y="141.28317"
-       x="78.419373"
+       y="141.28319"
+       x="78.402893"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.09716344px;line-height:1;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19357271"
        xml:space="preserve"><tspan
          style="stroke-width:0.19357271"
-         y="141.28317"
-         x="78.419373"
+         y="141.28319"
+         x="78.402893"
          id="tspan1936"
          sodipodi:role="line">contiguous data</tspan></text>
   </g>
