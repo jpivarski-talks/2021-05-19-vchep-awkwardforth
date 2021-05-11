@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="tbasket-to-awkward.svg">
+   sodipodi:docname="tbasket-to-awkward-3.svg">
   <defs
      id="defs2">
     <marker
@@ -134,8 +134,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="221.41719"
-     inkscape:cy="131.8304"
+     inkscape:cx="124.19001"
+     inkscape:cy="130.82025"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -160,7 +160,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -284,7 +284,7 @@
          y="133.71434"
          x="61.988091"
          id="tspan869"
-         sodipodi:role="line">TBasket</tspan></text>
+         sodipodi:role="line">TBasket of float[]</tspan></text>
     <path
        id="path1438"
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.34999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1481)"
