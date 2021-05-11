@@ -32,7 +32,7 @@
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\title[2021-05-19-vchep-awkwardforth]{AwkwardForth: accelerating Uproot with an internal DSL}
+\title[2021-05-19-vchep-awkwardforth]{{\tt :} AwkwardForth \\ deserialization DSL {\tt +} Awkward-Array {\tt +} {\tt ;}}
 \author{Jim Pivarski}
 \institute{Princeton University -- IRIS-HEP}
 \date{May 19, 2021}
@@ -56,7 +56,7 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{Deserializing columnar data can be very fast}
+\begin{frame}{Deserializing {\it columnar} data can be very fast}
 \vspace{0.25 cm}
 
 \begin{columns}
@@ -68,10 +68,43 @@
 \end{onlyenv}\begin{onlyenv}<4>Record-oriented data, on the other hand, {\it must} be iterated sequentially, with control-flow decisions throughout.
 
 \vspace{0.5 cm}
-For Uproot, this means that reading lists of lists of numbers is 460$\times$ slower than reading numbers.
+For Uproot, this means that reading lists of lists of numbers (in Python) is 460$\times$ slower than reading numbers (NumPy cast).
 \end{onlyenv}
 \end{columns}
-
 \end{frame}
+
+\begin{frame}{The problem of deserialization}
+\Large
+\begin{itemize}
+\item Data types are not known until you examine the data's schema.
+\item The most important part of generating fast code is usually knowing the types.
+\end{itemize}
+
+\large
+\vspace{0.5 cm}
+\begin{columns}[t]
+\column{0.5\linewidth}
+\mbox{ } \hfill \underline{Common solutions} \hfill \mbox{ }
+
+\vspace{0.25 cm}
+JIT-compile the deserialization code.
+
+\vspace{\baselineskip}
+\vspace{0.25 cm}
+HERE
+
+\column{0.5\linewidth}
+\mbox{ } \hfill \underline{Suitable for Uproot?} \hfill \mbox{ }
+
+\vspace{0.25 cm}
+Depending on LLVM would undermine portability.
+
+\vspace{0.25 cm}
+HERE
+
+\end{columns}
+\end{frame}
+
+
 
 \end{document}
