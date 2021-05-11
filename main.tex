@@ -56,9 +56,22 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{First slide}
+\begin{frame}{Deserializing columnar data can be very fast}
+\vspace{0.25 cm}
+
+\begin{columns}
+\column{0.7\linewidth}
+\only<1>{\includegraphics[width=\linewidth]{tbasket-to-awkward-1.pdf}}\only<2>{\includegraphics[width=\linewidth]{tbasket-to-awkward-2.pdf}}\only<3>{\includegraphics[width=\linewidth]{tbasket-to-awkward-3.pdf}}\only<4>{\includegraphics[width=\linewidth]{tbasket-to-awkward-nested.pdf}}
+
+\column{0.3\linewidth}
+\begin{onlyenv}<3>''Deserialization'' consists of $\mathcal{O}(1)$ metadata-only operations and $\mathcal{O}(n)$ vectorizable operations.
+\end{onlyenv}\begin{onlyenv}<4>Record-oriented data, on the other hand, {\it must} be iterated sequentially, with control-flow decisions throughout.
+
 \vspace{0.5 cm}
-HERE
+For Uproot, this means that reading lists of lists of numbers is 460$\times$ slower than reading numbers.
+\end{onlyenv}
+\end{columns}
+
 \end{frame}
 
 \end{document}
