@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="awkward-uproot-interaction-2.svg">
+   sodipodi:docname="awkward-uproot-interaction-3.svg">
   <defs
      id="defs2">
     <marker
@@ -79,6 +79,22 @@
          inkscape:connector-curvature="0" />
     </marker>
     <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1075"
+         style="fill:#ff6600;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
        refY="0"
@@ -102,8 +118,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="456.61102"
-     inkscape:cy="328.0802"
+     inkscape:cx="651.06539"
+     inkscape:cy="330.10051"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -328,6 +344,79 @@
          x="275.89151"
          y="222.52916"
          style="line-height:1.10000002;text-align:end;text-anchor:end;fill:#808080;stroke-width:0.35643351">Has a compiled C++ part.</tspan></text>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       id="path1046"
+       sodipodi:type="arc"
+       sodipodi:cx="143.12283"
+       sodipodi:cy="145.59181"
+       sodipodi:rx="50.380302"
+       sodipodi:ry="28.998745"
+       sodipodi:start="3.7543467"
+       sodipodi:end="5.6606294"
+       d="m 101.90836,128.91398 a 50.380302,28.998745 0 0 1 40.96756,-12.32056 50.380302,28.998745 0 0 1 41.1754,12.08883"
+       sodipodi:open="true" />
+    <path
+       sodipodi:open="true"
+       d="m -184.05134,-162.49661 a 50.380302,28.998745 0 0 1 40.96756,-12.32056 50.380302,28.998745 0 0 1 41.1754,12.08884"
+       sodipodi:end="5.6606294"
+       sodipodi:start="3.7543467"
+       sodipodi:ry="28.998745"
+       sodipodi:rx="50.380302"
+       sodipodi:cy="-145.81877"
+       sodipodi:cx="-142.83687"
+       sodipodi:type="arc"
+       id="path1512"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1516)"
+       transform="scale(-1)" />
+    <text
+       id="text2284"
+       y="101.65481"
+       x="143.29742"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.60391521px;line-height:1.10000002;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:0.35643351"
+       xml:space="preserve"><tspan
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.35643351"
+         y="101.65481"
+         x="143.29742"
+         sodipodi:role="line"
+         id="tspan2288">“Here is a TBasket and instructions</tspan><tspan
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.35643351"
+         y="110.01911"
+         x="143.29742"
+         sodipodi:role="line"
+         id="tspan2292">for deserializing it.”</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.60391521px;line-height:1.10000002;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:0.35643351"
+       x="143.29742"
+       y="187.44833"
+       id="text2310"><tspan
+         id="tspan2308"
+         sodipodi:role="line"
+         x="143.29742"
+         y="187.44833"
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.35643351">“Here is the deserialized array.”</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.38335562px;line-height:1.10000002;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:0.25234479"
+       x="243.27139"
+       y="116.80569"
+       id="text2348"><tspan
+         id="tspan2346"
+         sodipodi:role="line"
+         x="243.27139"
+         y="116.80569"
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.25234479">Builds &amp; runs</tspan><tspan
+         sodipodi:role="line"
+         x="243.27139"
+         y="122.72738"
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.25234479"
+         id="tspan2354">a fast VM</tspan><tspan
+         sodipodi:role="line"
+         x="243.27139"
+         y="128.64906"
+         style="line-height:1.10000002;text-align:center;text-anchor:middle;fill:#ff6600;stroke-width:0.25234479"
+         id="tspan2358">(in C++).</tspan></text>
     <ellipse
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.52899998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.52899997, 0.52899997;stroke-dashoffset:0;stroke-opacity:1"
        id="path944"
