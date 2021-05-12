@@ -82,34 +82,41 @@ For Uproot, this means that reading lists of lists of numbers (in Python) is 460
 \end{enumerate}
 
 \large
-\vspace{0.5 cm}
+\vspace{0.35 cm}
 \begin{columns}[t]
 \column{0.001\linewidth}
 
 \column{0.45\linewidth}
-\uncover<2->{\underline{Potential solutions}}
+\uncover<2->{\textcolor{darkblue}{\underline{\bf Potential solutions}}}
 
-\vspace{0.25 cm}
+\vspace{0.1 cm}
 \uncover<2->{Generate deserialization code in a dynamic language, like Python.}
 
-\vspace{0.25 cm}
+\vspace{0.1 cm}
 \uncover<3->{JIT-compile the deserialization code.}
 
 \vspace{\baselineskip}
-\vspace{0.25 cm}
-\uncover<4->{Create a lightweight/specialized virtual machine.}
+\vspace{0.1 cm}
+\uncover<4->{Use a parser combinator library.}
+
+\vspace{\baselineskip}
+\vspace{0.1 cm}
+\uncover<5->{Create a lightweight/specialized virtual machine.}
 
 \column{0.45\linewidth}
-\uncover<2->{\underline{Suitable for Uproot?}}
+\uncover<2->{\textcolor{darkblue}{\underline{\bf Suitable for Uproot?}}}
 
-\vspace{0.25 cm}
+\vspace{0.1 cm}
 \uncover<2->{This is what Uproot does, and as we've seen, it's too slow.}
 
-\vspace{0.25 cm}
+\vspace{0.1 cm}
 \uncover<3->{Adding LLVM as a dependency would undermine portability.}
 
-\vspace{0.25 cm}
-\uncover<4->{That's the subject of this talk.}
+\vspace{0.1 cm}
+\uncover<4->{ROOT deserialization requires advanced language features.}
+
+\vspace{0.1 cm}
+\uncover<5->{That's the subject of this talk.}
 \end{columns}
 \end{frame}
 
@@ -130,15 +137,28 @@ Ken Thompson, {\it Regular Expression Search Algorithm}, 1968.
 \normalsize
 \uncover<2->{A regex string like \mintinline{python}{"a(b|c)*d"} gets compiled into a finite state machine for fast execution. Limiting the scope of the machine provides opportunities for optimization.}
 
-\vspace{0.4 cm}
-\uncover<3->{Python's \mintinline{python}{struct} module (byte-parsing) and \mintinline{python}{numexpr} (math) are similar.}
+\vspace{0.25 cm}
+\uncover<3->{Python's \mintinline{python}{struct} module (bytestring-parsing) and \mintinline{python}{numexpr} (math) are similar.}
 \end{frame}
 
-\begin{frame}{Another issue: keeping Uproot and Awkward Array independent}
+\begin{frame}{Another issue: Uproot and Awkward Array must be independent}
+\large
+\vspace{0.2 cm}
+\begin{center}
+\only<1>{\includegraphics[width=0.85\linewidth]{awkward-uproot-interaction-1.pdf}}\only<2->{\includegraphics[width=0.85\linewidth]{awkward-uproot-interaction-2.pdf}}
+\end{center}
+\uncover<3->{\textcolor{darkblue}{Uproot needs a language to express how to deserialize a TBasket, but it doesn't need to be a human language.}}
+\end{frame}
+
+\begin{frame}{So, how about Forth?}
+
+
 
 
 
 \end{frame}
+
+
 
 
 
