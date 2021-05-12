@@ -31,6 +31,7 @@
 \xdefinecolor{darkred}{rgb}{0.7,0,0}
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
 
 \title[2021-05-19-vchep-awkwardforth]{{\tt :} AwkwardForth \\ deserialization DSL {\tt +} Awkward-Array {\tt +} {\tt ;}}
 \author{Jim Pivarski}
@@ -179,7 +180,28 @@ Forth was invented in 1970 to control radio astronomy telescopes and was popular
 \end{columns}
 \end{frame}
 
+\begin{frame}{What does Forth look like?}
+\large
+\vspace{0.3 cm}
+\mbox{ } \hfill \includegraphics[width=0.93\linewidth]{forth-example.png} \hfill \mbox{ }
 
+There's a global stack, words like ``\textcolor{gray}{\tt 1}'' push a number on the stack, and words like ``\textcolor{OliveGreen}{\tt\textbf{>}}'' and ``\textcolor{OliveGreen}{\tt\textbf{if}}'' pop values off the stack, apply operations, and push the result.
+
+\vspace{0.2 cm}
+Other than control flow like ``\textcolor{OliveGreen}{\tt\textbf{:}} \ldots\ \textcolor{OliveGreen}{\tt\textbf{;}}'' and ``\textcolor{OliveGreen}{\tt\textbf{do}} \ldots\ \textcolor{OliveGreen}{\tt\textbf{loop}},'' it goes left to right.
+\end{frame}
+
+\begin{frame}{AwkwardForth: a dialect with built-in parsing}
+\large
+\vspace{0.25 cm}
+\begin{columns}
+\column{1.05\linewidth}
+Deserializing \mintinline{c++}{std::vector<std::vector<float>>} from a ROOT TBasket:
+\end{columns}
+
+\vspace{0.05 cm}
+\mbox{ } \hfill \includegraphics[width=0.83\linewidth]{forth-parsing-example.png} \hfill \mbox{ }
+\end{frame}
 
 
 
