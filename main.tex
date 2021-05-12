@@ -74,35 +74,70 @@ For Uproot, this means that reading lists of lists of numbers (in Python) is 460
 \end{frame}
 
 \begin{frame}{The problem of deserialization}
+\vspace{0.25 cm}
 \Large
-\begin{itemize}
+\begin{enumerate}
 \item Data types are not known until you examine the data's schema.
 \item The most important part of generating fast code is usually knowing the types.
-\end{itemize}
+\end{enumerate}
 
 \large
 \vspace{0.5 cm}
 \begin{columns}[t]
-\column{0.5\linewidth}
-\mbox{ } \hfill \underline{Common solutions} \hfill \mbox{ }
+\column{0.001\linewidth}
+
+\column{0.45\linewidth}
+\uncover<2->{\underline{Potential solutions}}
 
 \vspace{0.25 cm}
-JIT-compile the deserialization code.
+\uncover<2->{Generate deserialization code in a dynamic language, like Python.}
+
+\vspace{0.25 cm}
+\uncover<3->{JIT-compile the deserialization code.}
 
 \vspace{\baselineskip}
 \vspace{0.25 cm}
-HERE
+\uncover<4->{Create a lightweight/specialized virtual machine.}
 
-\column{0.5\linewidth}
-\mbox{ } \hfill \underline{Suitable for Uproot?} \hfill \mbox{ }
-
-\vspace{0.25 cm}
-Depending on LLVM would undermine portability.
+\column{0.45\linewidth}
+\uncover<2->{\underline{Suitable for Uproot?}}
 
 \vspace{0.25 cm}
-HERE
+\uncover<2->{This is what Uproot does, and as we've seen, it's too slow.}
 
+\vspace{0.25 cm}
+\uncover<3->{Adding LLVM as a dependency would undermine portability.}
+
+\vspace{0.25 cm}
+\uncover<4->{That's the subject of this talk.}
 \end{columns}
+\end{frame}
+
+\begin{frame}{``Lightweight'' virtual machines?}
+\vspace{0.25 cm}
+\Large
+
+The most common virtual machines are not Java, VirtualBox, Xen, etc., but regex string-matching.
+
+\vspace{0.25 cm}
+\begin{center}
+\scriptsize
+Ken Thompson, {\it Regular Expression Search Algorithm}, 1968.
+
+\includegraphics[width=0.5\linewidth]{thompson-regex-fig5.png}
+\end{center}
+
+\normalsize
+\uncover<2->{A regex string like \mintinline{python}{"a(b|c)*d"} gets compiled into a finite state machine for fast execution. Limiting the scope of the machine provides opportunities for optimization.}
+
+\vspace{0.4 cm}
+\uncover<3->{Python's \mintinline{python}{struct} module (byte-parsing) and \mintinline{python}{numexpr} (math) are similar.}
+\end{frame}
+
+\begin{frame}{Another issue: keeping Uproot and Awkward Array independent}
+
+
+
 \end{frame}
 
 
