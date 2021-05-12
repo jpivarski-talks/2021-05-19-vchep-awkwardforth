@@ -57,7 +57,7 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{Deserializing {\it columnar} data can be very fast}
+\begin{frame}{\only<1-3>{Deserializing {\it columnar} data can be very fast}\only<4>{Deserializing {\it record-oriented} is more limited}}
 \vspace{0.25 cm}
 
 \begin{columns}
@@ -74,7 +74,7 @@ For Uproot, this means that reading lists of lists of numbers (in Python) is 460
 \end{columns}
 \end{frame}
 
-\begin{frame}{The problem of deserialization}
+\begin{frame}{The general problem of deserialization}
 \vspace{0.25 cm}
 \Large
 \begin{enumerate}
@@ -97,9 +97,8 @@ For Uproot, this means that reading lists of lists of numbers (in Python) is 460
 \uncover<3->{Require a compilation step for every data file (like Protobuf).}
 
 \vspace{0.1 cm}
-\uncover<4->{JIT-compile the deserialization code.}
+\uncover<4->{JIT-compile the deserialization code (like ROOT, using Cling).}
 
-\vspace{\baselineskip}
 \vspace{0.1 cm}
 \uncover<5->{Use a parser combinator library.}
 
@@ -114,9 +113,8 @@ For Uproot, this means that reading lists of lists of numbers (in Python) is 460
 \uncover<2->{This is what Uproot does, and as we've seen, it's too slow.}
 
 \vspace{0.1 cm}
-\uncover<3->{That's a cumbersome workflow.}
+\uncover<3->{That's a cumbersome workflow if you have several datasets.}
 
-\vspace{\baselineskip}
 \vspace{0.1 cm}
 \uncover<4->{Adding LLVM as a dependency would undermine portability.}
 
@@ -191,7 +189,7 @@ There's a global stack, words like ``\textcolor{gray}{\tt 1}'' push a number on 
 Other than control flow like ``\textcolor{OliveGreen}{\tt\textbf{:}} \ldots\ \textcolor{OliveGreen}{\tt\textbf{;}}'' and ``\textcolor{OliveGreen}{\tt\textbf{do}} \ldots\ \textcolor{OliveGreen}{\tt\textbf{loop}},'' it goes left to right.
 \end{frame}
 
-\begin{frame}{AwkwardForth: a dialect with built-in parsing}
+\begin{frame}{AwkwardForth: a dialect of Forth with built-in parsing}
 \large
 \vspace{0.25 cm}
 \begin{columns}
@@ -203,6 +201,76 @@ Deserializing \mintinline{c++}{std::vector<std::vector<float>>} from a ROOT TBas
 \mbox{ } \hfill \includegraphics[width=0.83\linewidth]{forth-parsing-example.png} \hfill \mbox{ }
 \end{frame}
 
+\begin{frame}{Provides a way for Uproot to talk to Awkward Array}
+\vspace{0.25 cm}
+\begin{itemize}
+\item Knowledge of ROOT I/O stays in Uproot.
+\item Uproot generates an AwkwardForth program as a string (loose coupling).
+\item Awkward Array builds and runs the machine to get an Awkward Array as output.
+\item No humans need to read or write the Forth code (except for debugging).
+\end{itemize}
 
+\begin{columns}
+\column{0.001\linewidth}
+
+\column{0.55\linewidth}
+\includegraphics[width=1.1\linewidth]{forth-parsing-example.png}
+
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{tbasket-to-awkward-nested.pdf}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Performance for ROOT deserialization (higher is better)}
+\large
+\vspace{0.2 cm}
+\includegraphics[width=0.95\linewidth]{AwkwardForth-performance-ROOT.pdf}
+
+AwkwardForth is several times slower than compiled C++, but on par when data throughput is included. Compare also Python (current Uproot) and RNTuple.
+\end{frame}
+
+\begin{frame}{Performance for Avro deserialization (higher is better)}
+\large
+\vspace{0.2 cm}
+\includegraphics[width=0.95\linewidth]{AwkwardForth-performance-Avro.pdf}
+
+Since the language can handle any parsing problem, consider other formats like Avro. The \mintinline{python}{fastavro} library is C code, but doesn't know data types in advance.
+\end{frame}
+
+\begin{frame}{Performance for Parquet deserialization (higher is better)}
+\large
+\vspace{0.2 cm}
+\includegraphics[width=0.95\linewidth]{AwkwardForth-performance-Parquet.pdf}
+
+Keep going: consider Parquet. Here, AwkwardForth doesn't do as well as \mintinline{c++}{pyarrow}'s C++ parser because Parquet is a columnar format (like RNTuple).
+\end{frame}
+
+\begin{frame}{Parallel processing performance of AwkwardForth and Python}
+\large
+\vspace{0.2 cm}
+\begin{columns}
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{AwkwardForth-scaling.pdf}
+
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{Python-scaling.pdf}
+\end{columns}
+
+AwkwardForth machines are lightweight: we can make one per thread. Python is inhibited by the GIL. Scales linearly up to RAM access ceiling (0.5 GB/sec).
+\end{frame}
+
+\begin{frame}{Closing remarks}
+\Large
+\vspace{0.25 cm}
+\setbeamercolor{alerted text}{fg=darkblue}
+\begin{itemize}[<+-|alert@+>]\setlength{\itemsep}{0.2 cm}
+\item See the paper for more details, including application to \mintinline{python}{TypedArrayBuilder}.
+\item A complete Forth implementation is small ($<$ 5k lines of C++) and fast (5~ns per instruction).
+\item Particularly useful for communicating algorithms between software libraries with restricted (sandboxed) runtimes.
+\item Uproot's Python-generating routines must now be supplanted by Forth-generating routines; targeting the end of this year.
+\item You might want to consider a similar technique in your project!
+\end{itemize}
+\end{frame}
 
 \end{document}
