@@ -46,6 +46,10 @@
 
 \begin{frame}
   \titlepage
+
+\vspace{1 cm}
+\mbox{ } \hfill \href{https://indico.cern.ch/event/948465/contributions/4324131/}{\scriptsize\textcolor{blue}{\underline{vCHEP 2021 contribution 4324131}}} \hfill \mbox{ }
+\vspace{-1 cm}
 \end{frame}
 
 \logo{\pgfputat{\pgfxy(0.11, 7.4)}{\pgfbox[right,base]{\tikz{\filldraw[fill=dianablue, draw=none] (0 cm, 0 cm) rectangle (50 cm, 1 cm);}\mbox{\hspace{-8 cm}\includegraphics[height=1 cm]{princeton-logo.png}\hspace{0.1 cm}\raisebox{0.1 cm}{\includegraphics[height=0.8 cm]{iris-hep-logo.png}}\hspace{0.1 cm}}}}}
@@ -271,7 +275,11 @@ AwkwardForth machines are lightweight: we can make one per thread. Python is inh
 \item A complete Forth implementation is small ($<$ 5k lines of C++) and fast (5~ns per instruction).
 \item Particularly useful for communicating algorithms between software libraries with restricted (sandboxed) runtimes.
 \item Uproot's Python-generating routines must now be supplemented by Forth-generating routines; targeting the end of this year.
-\item You might want to consider a similar technique in your project!
+\item You might want to consider a similar technique in your project. \scriptsize
+
+\vspace{0.1 cm}
+\hfill\href{https://github.com/scikit-hep/awkward-1.0/tree/1.2.3/src/libawkward/forth}{\textcolor{blue}{\underline{https://github.com/scikit-hep/awkward-1.0/tree/1.2.3/src/libawkward/forth}}}
+
 \end{itemize}
 \end{frame}
 
